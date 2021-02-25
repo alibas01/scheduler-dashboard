@@ -1,6 +1,7 @@
 import { flow, map, reduce, filter, join, minBy } from "lodash/fp";
 
 export function getTotalInterviews(state) {
+  //console.log(state)
   return filter(appointment => appointment.interview)(state.appointments)
     .length;
 }
